@@ -43,11 +43,10 @@ app.post("/survey", function(req, res){
             parseInt(req.body.q9),
             parseInt(req.body.q10),
         ]
-    }
-    console.log('meet our new friend :' + newFriend)
+    };
     var friendString = JSON.stringify(newFriend);
     console.log('as a string = ' + friendString);
-    console.log('new friend scores(b) = ' + newFriend.scores);
+    console.log('new friend scores = ' + newFriend.scores);
     console.log(newFriend.scores[0] + newFriend.scores[9]);
     res.end();
 });

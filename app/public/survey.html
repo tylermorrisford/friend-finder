@@ -1,117 +1,123 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Failure</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body class="text-center">
-      <div class="container">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-      
+<body class="text-center">
+    <div class="container">
+
+
         <div class="jumbotron">
-                <h1 class="display-4">Take the survey</h1>
-                <p class="lead">Answer ten simple questions and get a new friend!</p>
-                <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="/" role="button">Home page</a>
-              </div>
-    <form action="/survey" method="POST" enctype="application/x-www-form-urlencoded">
-        <div class="form-row">
+            <h1 class="display-4">Take the survey</h1>
+            <p class="lead">Answer ten simple questions and get a new friend!</p>
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" href="/" role="button">Home page</a>
+        </div>
+        <form action="/survey" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter your name">
+                    <input type="text" class="form-control" id="inputName" name="inputName"
+                        placeholder="Enter your name">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="inputLink" name="inputLink" placeholder="Provide a link to your profile image">
+                    <input type="text" class="form-control" id="inputLink" name="inputLink"
+                        placeholder="Provide a link to your profile image">
                 </div>
-              </div>
+            </div>
             <hr style="width: 40%">
             <div class="form-group col-8">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q1">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q2">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q3">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q4">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q5">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q6">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q7">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q8">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q9">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="q10">
-                      <option value="1">1 (strongly disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (strongly agree)</option>
-                    </select>
-                  </div>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q1">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q2">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q3">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q4">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q5">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q6">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q7">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q8">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q9">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="q10">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
             <!-- add questions and choice inputs WITH NAMES! -->
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-  </div>
+        </form>
+    </div>
 </body>
+
 </html>
