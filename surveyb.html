@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Failure</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="text-center">
+    <form action="/survey" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">name</label>
+              <input type="name" id="exampleInputEmail1" placeholder="Enter name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+  </div>
+</div>
+
+</body>
+</html>
+<!-- above - bootstrap simplified form, post request sends data -->
+<!-- original materialize page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>        
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <h1 class="card-title">Take the survey</h1>
+                  <p>Answer ten simple questions and get a new friend!</p>
+                </div>
+                <div class="card-action">
+                  <a href="/">Home page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Survey Questions</h4>
+          <form action="/survey" method="POST">
+                      <div class="row">
+                        <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input id="icon_prefix" type="text" name="name" class="validate">
+                          <label for="icon_prefix">Name</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">photo_camera</i>
+                          <input id="icon_telephone" name="link" type="text">
+                          <label for="icon_telephone">Link to profile photo</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+          <div class="input-field col s12">
+              <h6>Question 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> 
+            <select id="q1" name="q1">
+              <option value="null" disabled selected>Choose your answer:</option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+          </div>
+          <br>
+          <div class="input-field col s12">
+              <h6>Question 2: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> 
+            <select id="q2">
+              <option value="null" disabled selected>Choose your answer:</option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            
+          </div>
+          <br>
+          <div class="input-field col s12">
+              <h6>Question 3: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> 
+            <select id="q3">
+              <option value="null" disabled selected>Choose your answer:</option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            
+          </div>
+          <br>
+          <div class="input-field col s12">
+              <h6>Question 4: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> 
+            <select id="q4">
+              <option value="null" disabled selected>Choose your answer:</option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            
+          </div>
+          <br>
+          <div class="input-field col s12">
+              <h6>Question 5: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> 
+            <select id="q5">
+              <option value="null" disabled selected>Choose your answer:</option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            
+          </div>
+
+          <button class="btn waves-effect waves-light" id="button" type="submit" name="button">Submit
+                <i class="material-icons right">send</i>
+              </button>
+        </form>
+                            <div style="height: 100px"></div>
+    </div>
+    <script type="text/JavaScript">
+        $(document).ready(function(){
+            M.AutoInit();
+      });
+
+
+        //Need HTML to know id and classes!
+        // $("#button").on("click", function(event) {
+        //     event.preventDefault();
+        //     var newFriend = {
+        //         friendName: $("#name").val().trim(),
+        //         friendPhoto: $("#link").val().trim()
+                // custEmail: $("#inputEmail").val().trim(),
+                // uniqueId: $("#inputUnique").val().trim()
+            // }; console.log(newFriend);
+
+            // Question: What does this code do??
+        //     $.post("/api/survey", newFriend)
+        //         .then(function(data) {
+        //             console.log("survey.html", data);
+        //             alert("Adding friend...");
+        //         });
+        // });
+    
+        </script>
+</body>
+</html>
