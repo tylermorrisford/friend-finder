@@ -26,16 +26,32 @@ app.get("/survey", function(req, res){
 })
 
 app.post("/survey", function(req, res){
-    // console.log(req);
     // var newName = req.body;
     // console.log(req.body);
-    // console.log(req);
-    var newFriend = req.body;
-    friends.push(newFriend);
-    console.log(friends);
+    var newFriend = {
+        name: req.body.inputName,
+        link: req.body.inputLink,
+        scores: [
+            parseInt(req.body.q1),
+            parseInt(req.body.q2),
+            parseInt(req.body.q3),
+            parseInt(req.body.q4),
+            parseInt(req.body.q5),
+            parseInt(req.body.q6),
+            parseInt(req.body.q7),
+            parseInt(req.body.q8),
+            parseInt(req.body.q9),
+            parseInt(req.body.q10),
+        ]
+    }
+    console.log('meet our new friend :' + newFriend)
+    var friendString = JSON.stringify(newFriend);
+    console.log('as a string = ' + friendString);
+    console.log('new friend scores(b) = ' + newFriend.scores);
+    console.log(newFriend.scores[0] + newFriend.scores[9]);
     res.end();
 });
 
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT + ". no really, I'm listening");
+    console.log("App listening on local host port #" + PORT);
 });
