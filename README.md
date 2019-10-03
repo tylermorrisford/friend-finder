@@ -23,5 +23,5 @@ to install the packages and dependencies(in this case, mysql, inquirer and doten
 ## Built with
 * [Node](https://nodejs.org/en/) - Asynchronous, single-threaded js runtime environment
 ### npm packages
-* [express](https://www.npmjs.com/package/express) - server package
+* [express](https://www.npmjs.com/package/express) - magic server
 * [path](https://www.npmjs.com/package/path) - path shortcuts

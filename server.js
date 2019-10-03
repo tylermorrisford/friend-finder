@@ -27,7 +27,7 @@ app.get("/survey", function(req, res){
 
 app.post("/survey", function(req, res){
     // var newName = req.body;
-    // console.log(req.body);
+    console.log('form returns: ' + req.body);
     var newFriend = {
         name: req.body.inputName,
         link: req.body.inputLink,
