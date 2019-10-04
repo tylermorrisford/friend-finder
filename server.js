@@ -72,7 +72,8 @@ app.post("/survey", function(req, res){
     var friendString = JSON.stringify(newFriend);
     console.log('as a string = ' + friendString);
     console.log('new friend scores = ' + newFriend.scores);
-    friends.push(friendString);
+    console.log('some friendly math :' + (friends[2].scores[3] + newFriend.scores[3]))
+    friends.push(newFriend);
     res.json(friends);
     res.end();
 });
