@@ -48,9 +48,6 @@ app.get("/survey", function(req, res){
     res.sendFile(path.join(__dirname, "app/public/survey.html"));
 })
 
-app.get("api/friends", function(req, res) {
-    res.json(friends);
-})
 
 app.post("/survey", function(req, res){
     var newFriend = {
@@ -70,13 +67,17 @@ app.post("/survey", function(req, res){
         ]
     };
     var friendString = JSON.stringify(newFriend);
-    console.log('as a string = ' + friendString);
-    console.log('new friend scores = ' + newFriend.scores);
-    console.log('some friendly math :' + (friends[2].scores[3] + newFriend.scores[3]))
+    // console.log('as a string = ' + friendString);
+    // console.log('new friend scores = ' + newFriend.scores);
+    // console.log('some friendly math :' + (friends[2].scores[3] + newFriend.scores[3]))
     friends.push(newFriend);
     res.json(friends);
     res.end();
 });
+
+app.get("/api/friends", function(req, res) {
+    res.json(friends);
+})
 
 app.listen(PORT, function() {
     console.log("App listening on local host port #" + PORT);
