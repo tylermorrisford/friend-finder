@@ -72,7 +72,7 @@ app.post("/survey", function(req, res){
     // console.log('some friendly math :' + (friends[2].scores[3] + newFriend.scores[3]))
     friends.push(newFriend);
     // res.json(friends);
-    res.redirect("/survey");
+    // res.redirect("/survey");
 });
 
 app.get("/api/friends", function(req, res) {
