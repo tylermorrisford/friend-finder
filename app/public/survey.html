@@ -13,15 +13,13 @@
 
 <body class="text-center">
     <div class="container">
-
-
         <div class="jumbotron">
             <h1 class="display-4">Take the survey</h1>
             <p class="lead">Answer ten simple questions and get a new friend!</p>
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="/" role="button">Home page</a>
         </div>
-        <form action="/survey" method="POST" enctype="application/x-www-form-urlencoded">
+        <form action="/survey" method="POST" enctype="application/x-www-form-urlencoded" id="friendForm">
             <div class="form-row">
                 <div class="col">
                     <input type="text" class="form-control" id="inputName" name="inputName"
@@ -116,8 +114,9 @@
                 </select>
             </div>
             <!-- add questions and choice inputs WITH NAMES! -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
         </form>
+        <div style="height: 100px"></div>
     </div>
     <!-- modal for friend match -->
     <div class="modal" id="friendModal" tabindex="-1" role="dialog">
@@ -131,7 +130,7 @@
                 </div>
                 <div class="modal-body">
                   <h6 id="friendMatch"></h6>
-                  <div id="imageMatch"></div>
+                  <img id="imageMatch" width="350" src="">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
@@ -140,12 +139,26 @@
             </div>
           </div>
           <script type="text/javascript">
+            //   $(document).ready
+            //   function openModal() {
+            //       $('#friendModal').modal('show');
+            //   }
+
+            // $('#friendForm').on('submit', function(e){
+            //     $('#friendModal').modal('show');
+            //     e.preventDefault();
+            //     });
+
           $('#submitButton').on('click', function(event) {
-            event.preventDefault();
-                $('#friendModal').modal('show')
+            event.preventDefault;
+            // place data in the modal
+            // $('#friendMatch').text(data.matchName)
+            // $('#imageMatch').attr('src', data.matchImage)   
+            // alert('submit works');  alert fires but modal is blocked by post?  
+            setTimeout$(openModal, 1200);
             
         })
-          
+        
           </script>
 </body>
 
