@@ -9,12 +9,35 @@ const bodyParser = require('body-parser');
 var app = express();
 var PORT = process.env.PORT || 8080;
 // setup express to return json
-app.use(express.urlencoded({ extended: true }));
-// app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+// app.use(express.json());
 
 // data
-var friends = [];
+var friends = [
+    {
+        'name': 'kerry',
+        'link': 'images/kerry.jpg',
+        'scores': [2,5,4,4,3,4,5,2,5,4]
+    },
+    {
+        'name': 'cesar',
+        'link': 'images/cesar.jpg',
+        'scores': [4,5,4,3,4,2,4,3,4,4]
+    },
+    {
+        'name': 'alex',
+        'link': 'images/alex.jpg',
+        'scores': [2,3,1,3,1,2,1,3,4,1]
+    },
+    {
+        'name': 'sam',
+        'link': 'images/sam.jpg',
+        'scores': [5,3,4,5,4,5,5,4,4,3]
+    }
+];
 
 
 app.get("/", function(req, res){
@@ -25,9 +48,11 @@ app.get("/survey", function(req, res){
     res.sendFile(path.join(__dirname, "app/public/survey.html"));
 })
 
+app.get("api/friends", function(req, res) {
+    res.json(friends);
+})
+
 app.post("/survey", function(req, res){
-    // var newName = req.body;
-    console.log('form returns: ' + req.body);
     var newFriend = {
         name: req.body.inputName,
         link: req.body.inputLink,
@@ -47,7 +72,8 @@ app.post("/survey", function(req, res){
     var friendString = JSON.stringify(newFriend);
     console.log('as a string = ' + friendString);
     console.log('new friend scores = ' + newFriend.scores);
-    console.log(newFriend.scores[0] + newFriend.scores[9]);
+    friends.push(friendString);
+    res.json(friends);
     res.end();
 });
 
