@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <hr style="width: 40%">
-            <div class="form-group col-8">
+            <div class="form-group col-sm12">
                 <label for="exampleFormControlSelect1">Example select</label>
                 <select class="form-control" id="q1" name="q1">
                     <option value="1">1 (strongly disagree)</option>
@@ -119,7 +119,7 @@
                     <option value="5">5 (strongly agree)</option>
                 </select>
             </div>
-            <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
         </form>
         <div style="height: 100px"></div>
     </div>
@@ -146,25 +146,12 @@
           <script type="text/javascript">
 
 
-          $('#submitButton').on('click', function(event) {
+          $('#submit').on('click', function(event) {
             event.preventDefault;
             var newFriend = {
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
                 scores: [
-
-                    // $("#q1").val(),
-                    // $("#q2").val(),
-                    // $("#q3").val(),
-                    // $("#q3").val(),
-                    // $("#q4").val(),
-                    // $("#q5").val(),
-                    // $("#q6").val(),
-                    // $("#q7").val(),
-                    // $("#q8").val(),
-                    // $("#q9").val(),
-                    // $("#q10").val(),
-
                     parseInt($('#q1').val()),
                     parseInt($('#q2').val()),
                     parseInt($('#q3').val()),
@@ -182,8 +169,8 @@
             $.post("/api/friends", newFriend, function(data) {
                 // place data in the modal
                 console.log('post worked');
-                $('#friendMatch').text(data.matchName)
-                $('#imageMatch').attr('src', data.matchImage)   
+                $('#friendMatch').text(data.name)
+                $('#imageMatch').attr('src', data.link)   
                 $('#friendModal').modal('show');
                   })
 
