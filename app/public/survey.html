@@ -9,11 +9,10 @@
     <title>Friend-Finder Survey</title>
     <!-- Bootstrap core CSS -->
     <script src="https://code.jquery.com/jquery.js"></script>   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body class="text-center">
@@ -135,7 +134,7 @@
                 </div>
                 <div class="modal-body">
                   <h6 id="friendMatch"></h6>
-                  <img id="imageMatch" width="350" src="">
+                  <img id="imageMatch" src="#">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
@@ -147,21 +146,21 @@
 
 
           $('#submit').on('click', function(event) {
-            event.preventDefault;
+            event.preventDefault();
             var newFriend = {
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
                 scores: [
-                    parseInt($('#q1').val()),
-                    parseInt($('#q2').val()),
-                    parseInt($('#q3').val()),
-                    parseInt($('#q4').val()),
-                    parseInt($('#q5').val()),
-                    parseInt($('#q6').val()),
-                    parseInt($('#q7').val()),
-                    parseInt($('#q8').val()),
-                    parseInt($('#q9').val()),
-                    parseInt($('#q10').val()),
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val(),
                 ]
             };
 
@@ -171,7 +170,7 @@
                 console.log('post worked');
                 $('#friendMatch').text(data.name)
                 $('#imageMatch').attr('src', data.link)   
-                $('#friendModal').modal('show');
+                $('#friendModal').modal('toggle');
                   })
 
         })
