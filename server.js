@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 var app = express();
 var PORT = process.env.PORT || 8080;
-// setup express to return json
+// use body-parser to handle json
 // app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -92,8 +92,7 @@ app.post("/survey", function(req, res){
     res.json(friends[yourNewFriend])
     
     friends.push(newFriend);
-    matchName = friends[yourNewFriend].name;
-    matchImage = friends[yourNewFriend].link;
+     
 
 
 });
