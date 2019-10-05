@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Failure</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">  
+    <title>Friend-Finder Survey</title>
     <!-- Bootstrap core CSS -->
     <script src="https://code.jquery.com/jquery.js"></script>   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -145,7 +147,6 @@
 
           $('#submitButton').on('click', function(event) {
             event.preventDefault;
-
             var newFriend = {
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
@@ -163,15 +164,16 @@
                 ]
             };
 
+            $.post('/api/friends', newFriend)
+            .done(function(data) {
+                // place data in the modal
+                $('#friendMatch').text(data.matchName)
+                $('#imageMatch').attr('src', data.matchImage)   
+                $('#friendModal').modal('show');
+                  })
+
         })
         
-        $.post('/api/friends', newFriend)
-        .done(function(data) {
-            // place data in the modal
-            $('#friendMatch').text(data.matchName)
-            $('#imageMatch').attr('src', data.matchImage)   
-            $('#friendModal').modal('show');
-              })
         
           </script>
 </body>
