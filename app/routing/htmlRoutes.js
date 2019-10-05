@@ -13,7 +13,3 @@ module.exports = function(app) {
     });
 }
 
-// app/public/home.html
-
-// app/public/
-

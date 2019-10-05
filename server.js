@@ -11,12 +11,12 @@ var PORT = process.env.PORT || 8080;
 // use body-parser to handle json
 // app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.text());
 // app.use(express.json());
 
-require("./app/routing/htmlRoutes")(app);
 require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // app.get("/", function(req, res){
 //     res.sendFile(path.join(__dirname, "app/public/home.html"));

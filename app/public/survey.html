@@ -24,7 +24,8 @@
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="/" role="button">Home page</a>
         </div>
-        <form action="/survey" method="POST" enctype="application/x-www-form-urlencoded" id="friendForm">
+        <form enctype="application/x-www-form-urlencoded" id="friendForm">
+        <!-- <form id="friendForm"> -->
             <div class="form-row">
                 <div class="col">
                     <input type="text" class="form-control" id="inputName" name="inputName"
@@ -151,6 +152,19 @@
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
                 scores: [
+
+                    // $("#q1").val(),
+                    // $("#q2").val(),
+                    // $("#q3").val(),
+                    // $("#q3").val(),
+                    // $("#q4").val(),
+                    // $("#q5").val(),
+                    // $("#q6").val(),
+                    // $("#q7").val(),
+                    // $("#q8").val(),
+                    // $("#q9").val(),
+                    // $("#q10").val(),
+
                     parseInt($('#q1').val()),
                     parseInt($('#q2').val()),
                     parseInt($('#q3').val()),
@@ -164,9 +178,10 @@
                 ]
             };
 
-            $.post('/api/friends', newFriend)
-            .done(function(data) {
+
+            $.post("/api/friends", newFriend, function(data) {
                 // place data in the modal
+                console.log('post worked');
                 $('#friendMatch').text(data.matchName)
                 $('#imageMatch').attr('src', data.matchImage)   
                 $('#friendModal').modal('show');
