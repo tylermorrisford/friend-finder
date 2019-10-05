@@ -10,8 +10,6 @@ app.post("/api/friends", function(req, res) {
     console.log('this is req.body.scores ' + req.body.scores);
     var newFriend = req.body;
     console.log('this is a string of the new friend ' + JSON.stringify(newFriend));
-        // console.log('new friend scores = ' + newFriend.scores);
-        // console.log('some friendly math :' + (friends[2].scores[3] + newFriend.scores[3]))
         var maxDifference = 40;
         var yourNewFriend = 0;
         for (var i = 0; i<friends.length; i++) {
