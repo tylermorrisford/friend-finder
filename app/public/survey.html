@@ -116,7 +116,6 @@
                     <option value="5">5 (strongly agree)</option>
                 </select>
             </div>
-            <!-- add questions and choice inputs WITH NAMES! -->
             <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
         </form>
         <div style="height: 100px"></div>
@@ -151,27 +150,27 @@
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
                 scores: [
-
-
-
+                    parseInt($('#q1').val()),
+                    parseInt($('#q2').val()),
+                    parseInt($('#q3').val()),
+                    parseInt($('#q4').val()),
+                    parseInt($('#q5').val()),
+                    parseInt($('#q6').val()),
+                    parseInt($('#q7').val()),
+                    parseInt($('#q8').val()),
+                    parseInt($('#q9').val()),
+                    parseInt($('#q10').val()),
                 ]
+            };
 
-            }
-
-
-
-
-
-            // place data in the modal
-            
         })
         
-        $.post('/api/friends', userInput)
+        $.post('/api/friends', newFriend)
         .done(function(data) {
+            // place data in the modal
             $('#friendMatch').text(data.matchName)
             $('#imageMatch').attr('src', data.matchImage)   
             $('#friendModal').modal('show');
-            
               })
         
           </script>
