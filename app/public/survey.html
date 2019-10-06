@@ -156,6 +156,10 @@
 
         $('#submit').on('click', function (event) {
             event.preventDefault();
+            if ($('#inputName').val() === "" || $('#inputLink').val() === "" ) {
+
+            } else {
+
             var newFriend = {
                 name: $('#inputName').val().trim(),
                 link: $('#inputLink').val().trim(),
@@ -182,8 +186,10 @@
                 $('#friendModal').modal('toggle');
             })
 
-        })
+        }
+    });
 
+    
 
     </script>
 </body>
